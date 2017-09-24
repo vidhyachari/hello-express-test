@@ -14,7 +14,7 @@ node('default-jenkins-slave') {
 
     stage "list images"
 
-       sh "docker images"
+        sh "sudo docker images"
 
     stage "Build"
 
