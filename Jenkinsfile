@@ -14,7 +14,7 @@ node('default-jenkins-slave') {
 
     stage "Build"
 
-        sh "docker build -t ${imageName} ."
+        sh "docker build -t ${imageName} -f Dockerfile"
 
     stage "Push"
 
