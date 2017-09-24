@@ -1,4 +1,4 @@
-node('default-jenkins-slave') {
+node('jenkins-slave') {
 
     checkout scm
 
