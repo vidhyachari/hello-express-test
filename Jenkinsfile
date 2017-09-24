@@ -4,7 +4,7 @@ node('default-jenkins-slave') {
 
     env.DOCKER_API_VERSION="1.23"
 
-    //sh "git rev-parse --short HEAD > commit-id"
+    sh "git rev-parse --short HEAD > commit-id"
 
     tag = "latest"
     appName = "hello-express"
