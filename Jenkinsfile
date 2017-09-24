@@ -12,9 +12,13 @@ node('default-jenkins-slave') {
     imageName = "${appName}:${tag}"
     env.BUILDIMG=imageName
 
+    stage "list images"
+
+       sh "docker images"
+
     stage "Build"
 
-        sh "docker build -t ${imageName} -f Dockerfile"
+        sh "docker build -t ${imageName}"
 
     stage "Push"
 
